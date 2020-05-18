@@ -8,10 +8,10 @@
 <header>
   <nav>
     <ul>
-    <li> <a href="">ИНФОРМАЦИЯ</a></li>
-    <li><a href="">ФОТО И ВИДЕО</a></li>
-    <li><a href="">КАРТА ШТАТА</a></li>
-    <li><a href="">ГОСТИНИЦЫ</a></li>
+    <li> <a href="blank.html">ИНФОРМАЦИЯ</a></li>
+    <li><a href="blank.html">ФОТО И ВИДЕО</a></li>
+    <li><a href="map.html">КАРТА ШТАТА</a></li>
+    <li><a href="catalog.html">ГОСТИНИЦЫ</a></li>
   </ul>
   <a href="index.html">
     <img src="" alt="иконка" width="" height="">
@@ -20,10 +20,42 @@
 </header>
 <main>
   <h1></h1>
-  <h2></h2>
+  <section class="filter">
+  <p>Инфракстуктура:</p>
+  <ul>
+    <li>Бассейн</li><!--Радиокнопки это я так думаю, кнопки перключатели, но думаю их не надо верстать сейчас-->
+    <li>парковка</li>
+    <li>Wi-fi</li>
+  </ul>
+  <p>Тип жилья:</p>
+  <ul>
+    <li>гостиницы</li>
+    <li>мотель</li>
+    <li>апартаменты</li>
+  </ul>
+  <p>стоимость в сутки(Р):</p>
+<!--это не знаю как верстать, думаю пока не нужно-->
+  <button type="button">Показать</button>
+  </section>
+  <section class="search">
+    <h2>Найдено:3</h2>
+    <p>Сортировка:</p>
+    <ul>
+      <li>
+        <a>По цене</a>
+      </li>
+      <li>
+        <a href="">по типу</a>
+      </li>
+      <li>
+        <a href="">по рейтингу</a>
+      </li>
+    </ul>
+  </section>
+  
 
 <article class="catalog_hotel">
-  <h3>AMARA RESORT&SPA</h3><br>
+  <h2>AMARA RESORT&SPA</h2><br>
   <span>ГОСТИНИЦА</span>
   <span>ОТ 4000 Р.</span>
   <a href="amara_resort.html" >ПОДРОБНЕЕ</a>
@@ -33,7 +65,7 @@
 </article>
 
 <article class="catalog_hotel">
-  <h3>DESERT QUAIL INN</h3><br>
+  <h2>DESERT QUAIL INN</h2><br>
   <span>МОТЕЛЬ</span>
   <span>ОТ 3000 Р.</span>
   <a href="desert.html">ПОДРОБНЕЕ</a>
@@ -43,7 +75,7 @@
 </article>
 
 <article class="catalog_hotel">
-  <h3>VILLAS AT POCO DIABLO</h3><br>
+  <h2>VILLAS AT POCO DIABLO</h2><br>
   <span>АПАРТАМЕНТЫ</span>
   <span>ОТ 2000 Р.</span>
   <a href="villas.html" >ПОДРОБНЕЕ</a>
