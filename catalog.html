@@ -19,23 +19,60 @@
 </nav>
 </header>
 <main>
-  <h1></h1>
+  <h1 class="visually-hidden">Каталог гостиниц</h1>
   <section class="filter">
-  <p>Инфракстуктура:</p>
-  <ul>
-    <li>Бассейн</li><!--Радиокнопки это я так думаю, кнопки перключатели, но думаю их не надо верстать сейчас-->
-    <li>парковка</li>
-    <li>Wi-fi</li>
-  </ul>
-  <p>Тип жилья:</p>
-  <ul>
-    <li>гостиницы</li>
-    <li>мотель</li>
-    <li>апартаменты</li>
-  </ul>
-  <p>стоимость в сутки(Р):</p>
-<!--это не знаю как верстать, думаю пока не нужно-->
-  <button type="submit">Показать</button>
+    <h2 class="visually_hidden">Фильтр гостиниц</h2>
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <fieldset>
+        <legend>Инфракстуктура</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="pool" id="pool" checked>
+            <label for="pool">Бассейн</label>
+          </li>
+          <li>
+            <input type="checkbox" name="parking" id="parking" >
+            <label for="parking">Парковка</label>
+          </li>
+          <li>
+            <input type="checkbox" name="wifi" id="wifi" >
+            <label for="wifi">wi-fi</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">гостиница</label>
+          </li>
+          <li>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+          </li>
+          <li>
+            <input type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  <div class="price_control">
+    <p>Стоимость в сутки (р):</p>
+      <label>от
+         <input type="text" name="min-price" value="0">
+      </label>
+      <label>до
+         <input type="text" name="max-price" value="3000">
+      </label>
+    <div class="range_price_control"><!--Попытка сверстать контролер диапазона цены-->
+         <div class="scale"></div>
+         <button type="button" class="min-price"></button>
+         <button type="button" class="max-price"></button>
+    </div>
+  </div>
+  <button type="button">Показать</button>
   </section>
   <section class="search">
     <h2>Найдено:3</h2>
@@ -51,7 +88,8 @@
         <a href="">по рейтингу</a>
       </li>
     </ul>
-    <div class="down-up"></div>
+    <button type="button" class="down_arrow" aria-pressed="true" disabled></button>
+    <button type="button" class="up_arrow"></button><!---это значки стрелки промотки стрелки вниз и вверх, т.к и надо нажимать думаю, что лучше ихкнопками сделать-->
   </section>
   
 
@@ -59,8 +97,8 @@
   <h2>AMARA RESORT&SPA</h2><br>
   <span>ГОСТИНИЦА</span>
   <span>ОТ 4000 Р.</span>
-  <a href="amara_resort.html" >ПОДРОБНЕЕ</a>
-  <a href="submit_form.html" >Забронировать</a>
+  <a href="amara_resort.html">ПОДРОБНЕЕ</a>
+  <a href="submit_form.html">Забронировать</a>
    <img src="img/amara.jpg" alt="Вид из окна отеля на зеленую лужайку и красные горы." width="135px" height="90px">
     <p class="rating_amara">Рейтинг: 8.5</p>
     <div class="star">

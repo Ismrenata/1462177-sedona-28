@@ -18,8 +18,8 @@
 </nav>
 </header>
 <main>
-<section class="">
-  <h1></h1>
+<section class="site header">
+  <h1 class="visually-hidden">Главная страница сайта Седона</h1>
   <img src="img/svg-sedona/intro-welcome.svg" width="457px" height="357px" alt="">
 <!--<img src="img/svg-sedona/intro-mask.svg"  width="1200px" height="57px">-->
 </section>
@@ -27,7 +27,7 @@
   <p>СЕДОНА НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ,
      ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</p>
 </div>
-<section class=""><!--Внизу размечен раздел красный(второе задание)-->
+<section class="best_reasons"><!--Внизу размечен раздел красный(второе задание)-->
   <h2>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН</h2><!--Тут затрудняюсь либо заголовок, либо просто p-->
   <ul>
     <li class="reason1"> 
@@ -91,20 +91,30 @@
   <h2>Заинтересовались:</h2>
   <p>Укажите предполагаемые даты поездки,<br>
     и мы покажем вам лучшие предложения гостиниц в седоне</p>
-  <form action="" method="GET">
+    <div class="search_hotel">
+  <form action="https://echo.htmlacademy.ru" method="GET">
     <fieldset>
       <legend>Поиск гостиницы в седоне</legend>    
-    <label for="arrival date">ДАТА ЗАЕЗДА</label>
-    <input type="text" name="arrival date" id="arrival date" value="24 апреля 2017" required><br>
+   <p> 
+     <label for="arrival date">ДАТА ЗАЕЗДА</label>
+    <input type="text" name="arrival date" id="arrival date" placeholder="24 апреля 2017" required>
+  </p>
+  <p>
     <label for="date of departure">дата выезда</label>
-    <input type="text" name="date of departure" id="date of departure" value="4 июля 2017" required><br>
+    <input type="text" name="date of departure" id="date of departure" placeholder="4 июля 2017" required>
+  </p>
+   <p>
     <label for="adults">взрослые</label>
     <input type="number" id="adults" min="1" max="5" step="1">
+  </p>
+  <p>
     <label for="children">дети</label>
-    <input type="number" id="children" min="0" max="4" step="1"><br>
-    <button type="submit">найти</button>
+    <input type="number" id="children" min="0" max="4" step="1">
+  </p>
     </fieldset>
   </form>
+  <button type="button">найти</button>
+</div>
 </section>
 </main>
 
@@ -114,7 +124,7 @@
   </a>
 </section>
 
-<footer class="">
+<footer class="footer">
    <p>#VISIT SEDONA</p>
     <a href="tel:+74956660266">ТЕЛ:+7(495)666-02-66</a> 
     <ul>
