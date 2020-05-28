@@ -1,0 +1,353 @@
+/* Variables */
+:root {
+    /*цвета для элементов и блоков*/
+    --white_color: #FFFFFF;
+    --sky_color: #81B3D2;
+    --gray_main: #EEEEEE; /*для причин с 3 по 5ю*/
+    --light_gray: #F2F2F2;/*для фона взади главной и каталога отелей, для полей ввода, надписи рейтинг*/
+    --brown_color: #766357;/*шапка форм, кнопок забронировать*/
+    --white_for_footer:  rgba(255, 255, 255, 0.9);
+    /*цвета для шрифтов*/
+    --special_gray: #CACACA;
+    --brown-black_text: #333333;/* for text, description*/ 
+    --black: #000000;
+    --gray_for_line: #E5E5E5;;
+    --gray_for_rating: #666666;
+}
+/* Global */
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    color: var(--black);
+    text-transform: uppercase;
+    background-color: var(--light_gray);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Main navigation */
+
+.main_navigation {
+    line-height: 26px;
+    color: var(--black);
+    
+  }
+  .wrapper_navigation {
+    background-color: var(--white_color);
+  }
+  .list_navigation {
+    list-style: none;
+  }
+ .main-navigation img {
+background-color: var(--sky_color); /*пока не знаю как цвет сделать поформе логотипа*/
+ } 
+  /*logo and name Sedona*/
+  .site header {
+    background-image: url("img/background photo.ipg");
+  }
+  /*хочу подключить белую часть после фона*/
+  .site header::after {
+    content: "";
+    background-image: url(img/svg-sedona/intro-mask.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .sedona_statement {
+text-align: center;
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+background-color: var(--white_color);
+  }
+  /* раздел о причинах посетить седону*/
+  .best_reasons {
+    background-color: var(--white_color); 
+  }
+  .best_reasons h2 {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+  } 
+.list-reasons {
+  list-style: none; 
+}
+.list-reasons div {
+  text-align: center;
+  font-size: 14px;
+line-height: 21px;
+}
+.list-reasons h3 {
+font-weight: bold;
+font-size: 21px;
+line-height: 21px;
+}
+.list-reasons .reason3, .list-reasons .reason4, .list-reasons .reason5  {
+  background-color: var(--gray_main);
+}
+/*раздел о преимуществах*/
+.features {
+background-color: var(--white_color);
+ font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+}
+.list-features {
+  list-style: none; 
+}
+.features h3 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+/*здесь попытаюсь вставить иконки*/
+.list-features li:first-of-type::before {
+  content: "";
+  background-image: url("img/svg-sedona/icon-1.svg");
+  width: 75px;
+ height: 72px;
+}
+.list-features li:nth-of-type(2)::before {
+  content: "";
+  background-image: url("img/svg-sedona/icon-3.svg");
+  width: 75px;
+  height: 70px;
+}
+.list-features li:nth-of-type(3)::before {
+  content: "";
+  background-image: url("img/svg-sedona/icon-2.svg");
+  width: 64px;
+  height: 77px;
+}
+/*поиск отела и карта*/
+.index_search {
+  background-color: var(--white_color); 
+  text-align: center;
+}
+.index_search h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+}
+.form_index_search {
+  background-color: var(--white_color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+.form_index_search legend {
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+color: var(--white_color);
+background-color: var(--brown_color);
+}
+.form_index_search input[type="text"] {
+  background-color: var(--light_gray);
+  width: 346px;
+  height: 38px;
+}
+/*хочу вставить иконки кадендариков в поля*/
+.form_index_search input[type="text"]::after {
+  content:"";
+  background-image: url("img/svg-sedona/calendar.svg");
+  width: 21px;
+  height: 23px;
+}
+.form_index_search input[type="number"] {
+  background-color: var(--light_gray);
+  width: 114px;
+  height: 38px;
+}
+.form_index_search button[type="button"] {
+  background-color: var(--sky_color);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--white_color);
+  width: 458px;
+  height: 58px;
+  font: inherit;
+  vertical-align: middle;
+}
+.map {
+  width: 1199px;
+  height: 594px;
+  position: absolute;
+  background-color: grey;
+}
+/*footer part */
+.footer {
+  background-color: var(--white_color);
+  width: 1200px;
+  height: 120px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+}
+.footer .list_footer {
+  list-style: none;
+}
+.list_footer li {
+  background-color: var(--sky_color);
+  width: 36px;
+  height: 36px;
+}
+.footer .htmlacademy {
+  font-size: 14px;
+  line-height: 26px;
+}
+/*для скрытых элементов*/
+.visually-hidden {
+  display: none;
+} 
+
+/*catalog inner page*/
+/*фильтр цены, шапка сайта*/
+.filter {
+  background-color: var(--brown-black_text);
+  background-image: url("img/background-catalog.jpg");
+  color: var(--white_color);
+  font-size: 14px;
+  line-height: 21px;
+  width: 1200px;
+  height: 217px;
+}
+.filter legend {
+font-weight: bold;
+font-size: 16px;
+line-height: 21px;
+}
+.list_filter_infrastructure, .list_filter_housetipe {
+  list-style: none;
+}
+.price_control p {
+  font-weight: bold;
+}
+.price_control label {
+  text-align: center;
+}
+.price_control input [type="text"] {
+  background-color: transparent;
+}
+.min-max_price {
+  border:2px solid var(--white_color);
+}
+/*я не знаю как офорлять ползунки на контролере цены*/
+.filter button[type="submit"] {
+  background-color: transparent;
+  color: var(--white_color);
+  text-align: center;
+  border: 3px solid var(--white_color);
+}
+.catalog_search_line {
+  background-color: var(--white_color);
+  color: var(--black);
+  width: 1200px;
+  height: 86px;
+  border-bottom: 1px solid var(--gray_for_line);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.catalog_search_line h2 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.catalog_search_line ul {
+  list-style: none;
+}
+/*это для стрелок прокрутки вверх и вниз*/
+.down_arrow::after {
+  content: url("img/svg-sedona/icon-down-dir.svg");
+  width: 11px;
+  height: 10px;
+}
+.up_arrow::after {
+  content: url("img/svg-sedona/icon-up-dir.svg");
+  width: 11px;
+  height: 10px;
+}
+/*каталог отелей*/
+.catalog_hotel {
+  background-color: var(--white_color);
+  border-bottom: 1px solid var(--gray_for_line);
+  width: 1200px;
+  height: 150px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--brown-black_text);
+}
+
+.catalog_hotel h2 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--black);
+}
+/*ссылки -кнопки */
+.catalog_hotel a:first-of-type {
+  border: 1px solid var(--sky_color);
+  background-color: var(--sky_color);
+  color: var(--white_color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+.catalog_hotel a:nth-last-of-type(2) {
+  border: 1px solid var(--brown_color);
+  background-color: var(--brown_color);
+  color: var(--white_color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+/*слово рейтинг и звезды добавлю*/
+.catalog_hotel .rating {
+  background-color: var(--light_gray);
+  color: var(--gray_for_rating);
+  text-align: center;
+  border: 1px solid var(--light_gray);
+}
+.amara .star::after {
+  content: url("img/svg-sedona/star.svg")
+           url("img/svg-sedona/star.svg")
+           url("img/svg-sedona/star.svg")
+           url("img/svg-sedona/star.svg");
+  width: 18px;         
+  height: 17px;         
+}
+.desert .star::after {
+  content: url("img/svg-sedona/star.svg")
+           url("img/svg-sedona/star.svg")
+           url("img/svg-sedona/star.svg");
+  width: 18px;         
+  height: 17px;         
+}
+.villas .star::after {
+  content:url("img/svg-sedona/star.svg")
+          url("img/svg-sedona/star.svg");
+  width: 18px;         
+  height: 17px;         
+}
+
+
