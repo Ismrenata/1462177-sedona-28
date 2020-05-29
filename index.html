@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   
   <body>
@@ -19,54 +19,55 @@
        <li><a href="catalog.html">Гостиницы</a></li>
        </ul>
     </div>
-  <img src="img/svg-sedona/logo-sedona.svg"  width="138px" height="70px" alt="Седона. Главная">
+  <a class="logo_sedona"><img src="img/svg-sedona/logo-sedona.svg"  width="138px" height="70px" alt="Седона. Главная"></a>
 </nav>
 </header>
 <main>
-<section class="site header">
+<section class="site_header">
   <h1 class="visually-hidden">Главная страница сайта Седона</h1>
   <img src="img/svg-sedona/intro-welcome.svg" width="457px" height="357px" alt="">
 <!--<img src="img/svg-sedona/intro-mask.svg"  width="1200px" height="57px">-->
 </section>
-<div class="sedona_statement">
+
+<section class="best_reasons">
+  <div class="sedona_statement">
   <p>Седона небольшой городок в аризоне,
     заслуживающий большего!</p>
 </div>
-<section class="best_reasons">
   <h2>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон.</h2>
   <ul class="list-reasons">
-    <li class="reason1"> 
-      <div>
+    <li > 
+      <div class="reason1">
       <h3>Настоящий городок</h3>
       <p>—№1—<br>
 Седона — не атракцион для туристов, там течет своя жизнь</p>
       </div>
       <img src="img/reason1.jpg" width="800px" height="256px" alt="Вид из окна на улицу города:другие отели, флаг сша и горы позади. ">
     </li>
-    <li class="reason2"> 
-      <div>
+    <li > 
+      <div class="reason2">
       <h3>Там есть мост дьявола</h3>
       <p>—№2—<br>
 Да, по нему можно пройти если конечно вы осмелитесь</p>
       </div> 
       <img src="img/reason2.jpg" width="800px" height="256px" alt="Каменный мост соединающий две скалы, образует между ними арку.">
     </li>
-    <li class="reason3"> 
-      <div>
+    <li > 
+      <div class="reason3">
       <h3>Небольшая площадь</h3>
       <p>—№3—<br>
 Все достопримечательности находятся очень близко</p>
       </div>
     </li>
-    <li class="reason4"> 
-      <div>
+    <li > 
+      <div class="reason4">
       <h3>Красивая дорога</h3>
       <p>—№4—<br>
 Ехать в седону из лас-вегаса совсем не скучно!</p>
       </div>
     </li>
-    <li class="reason5"> 
-      <div>
+    <li > 
+      <div class="reason5">
       <h3>Мало туристов</h3>
       <p>—№5—<br>
 Большинство едет в гранд каньон и толпится там</p>
@@ -76,16 +77,16 @@
 <!--Внизу раздел о трех преимуществах-->
   <div class="features">
     <ul class="list-features">
-     <li>
+     <li class="feature1">
        <h3>Жильё</h3>
        <p>Рекомендуем пожить в настоящем отеле, все как в кино!</p>
      </li>
      
-     <li>
+     <li class="feature2">
       <h3>Еда</h3>
       <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
     </li>
-    <li>
+    <li class="feature3">
      <h3>Сувениры</h3>
       <p>Не только китайского, но и местного производства!</p>
     </li>
@@ -93,7 +94,7 @@
   </div>
 </section>
 <section class="index_search">
-  <h2>Заинтересовались:</h2>
+  <h2>Заинтересовались?</h2>
   <p>Укажите предполагаемые даты поездки,<br>
     и мы покажем вам лучшие предложения гостиниц в седоне</p>
     <div class="form_index_search">
@@ -138,7 +139,7 @@
 <li><a href=""><img src="img/svg-sedona/youtube.svg" alt="Ютуб" width="20px" height="16px"></a></li>
     </ul>
     <p class="htmlacademy">WEBSITE BY
-    <img src="img/svg-sedona/logo-htmlacademy.svg" width="114px" height="40px" alt="Онлайн-школа для подготовки верстальщиков.">
+    <a href="https://www.htmlacademy.ru"><img src="img/svg-sedona/logo-htmlacademy.svg" width="114px" height="40px" alt="Онлайн-школа для подготовки верстальщиков."></a>
     </p>
 </footer>
   </body>
