@@ -67,12 +67,15 @@ background-color: var(--sky_color); /*пока не знаю как цвет с�
 
   /*Welcom, name Sedona*/
   .site_header {
-    background-image: url("img/background_index.jpg");/*Почему он не прикрепляется ???*/
+    background-image: url(../img/background_index.jpg);/*Почему он не прикрепляется ???*/
     background-position: center;
     background-repeat: no-repeat;
+    width: 1200px;
+    height: 509px;
   }
   .site_header img {
     
+    vertical-align: middle; 
   }
 
   .sedona_statement {
@@ -84,9 +87,13 @@ background-color: var(--white_color);
   }
    /*хочу подключить белую часть после фона,но не выходит*/
    .sedona_statement::before {
-    content: url("img/svg-sedona/intro-mask.svg");
+    content: "";
+    background-image: url(../img/svg-sedona/intro-mask.svg);
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    width: 1200px;
+    height: 57px;
   }
 
   /* раздел о причинах посетить седону*/
@@ -140,22 +147,25 @@ text-align: center;
 */
 .feature1::before {
   content: "";
-  background-image: url('img/svg-sedona/icon-1.svg');
+  background-image: url(../img/svg-sedona/icon-1.svg);
   color: var(--sky_color);
   width: 75px;
  height: 72px;
+ position: absolute;
 }
 .feature2::before {
   content: "";
-  background-image: url("img/svg-sedona/icon-3.svg");
+  background-image: url(../img/svg-sedona/icon-3.svg);
   width: 75px;
   height: 70px;
+  position: absolute;
 }
 .feature3::before {
   content: "";
-  background-image: url("img/svg-sedona/icon-2.svg");
+  background-image: url(../img/svg-sedona/icon-2.svg);
   width: 64px;
   height: 77px;
+  position: absolute;
 }
 /*поиск отела и карта*/
 .index_search {
@@ -211,9 +221,10 @@ background-color: #604E43;
 /*хочу вставить иконки кадендариков в поля, и не выходит, не знааю как вообще работать с бефо и авте?*/
 .form_index_search input[type="text"]::after {
   content:"";
-  background-image: url("img/svg-sedona/calendar.svg");
+  background-image: url(../img/svg-sedona/calendar.svg);
   width: 21px;
   height: 23px;
+  position: absolute;
 }
 /*как убрать подсветку браузера по умолчанию при фокусе?*/
 .form_index_search input[type="text"]:focus{
@@ -299,7 +310,8 @@ background-color: #604E43;
 /*почему они фоновые картинки не подключаются?*/
 .filter {
   background-color: #766357;
-  background-image: url("img/background-catalog.jpg");
+  background-image: url(../img/background-catalog.jpg);
+  background-repeat: no-repeat;
   color: var(--white_color);
   font-size: 14px;
   line-height: 21px;
@@ -308,6 +320,7 @@ background-color: #604E43;
 }
 .filter fieldset {
 border: none;
+display: inline-block;
 }
 .filter legend {
 font-weight: bold;
@@ -316,6 +329,9 @@ line-height: 21px;
 }
 .list_filter_infrastructure, .list_filter_housetipe {
   list-style: none;
+}
+.price_control {
+  
 }
 .price_control p {
   font-weight: bold;
@@ -396,12 +412,14 @@ border-radius: 2px;
 
 /*это для стрелок прокрутки вверх и вниз, картинки как и во всем документе не вставляются*/
 .down_arrow::after {
-  content: url("img/svg-sedona/icon-down-dir.svg");
+  content: "";
+  background-image: url(../img/svg-sedona/icon-down-dir.svg);
   width: 11px;
   height: 10px;
 }
 .up_arrow::after {
-  content: url("img/svg-sedona/icon-up-dir.svg");
+  content: "";
+  background-image: url(../img/svg-sedona/icon-up-dir.svg);
   width: 11px;
   height: 10px;
 }
@@ -473,23 +491,23 @@ height: 27px;
 }
 /*здесь пытаюсь вставить звезды не выходит*/
 .amara .star::after {
-  content: url("img/svg-sedona/star.svg")
-           url("img/svg-sedona/star.svg")
-           url("img/svg-sedona/star.svg")
-           url("img/svg-sedona/star.svg");
+  content:"";
+  background-image: url(../img/svg-sedona/star.svg),
+  url(../img/svg-sedona/star.svg)
+  url(../img/svg-sedona/star.svg)
+  url(../img/svg-sedona/star.svg);
   width: 18px;         
   height: 17px;         
 }
 .desert .star::after {
-  content: url("img/svg-sedona/star.svg")
-           url("img/svg-sedona/star.svg")
-           url("img/svg-sedona/star.svg");
+  content:"";
+  background-image: url(../img/svg-sedona/star.svg), url(../img/svg-sedona/star.svg),  url(../img/svg-sedona/star.svg);
   width: 18px;         
   height: 17px;         
 }
 .villas .star::after {
-  content:url("img/svg-sedona/star.svg")
-          url("img/svg-sedona/star.svg");
+  content:"";
+  background-image: url(../img/svg-sedona/star.svg),  url(../img/svg-sedona/star.svg);
   width: 18px;         
   height: 17px;         
 }
