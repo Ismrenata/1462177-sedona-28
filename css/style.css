@@ -19,7 +19,7 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -55,7 +55,7 @@ body {
     color: var(--black);
   }
  .main-navigation img {
-background-color: var(--sky_color); /*пока не знаю как цвет сделать поформе логотипа*/
+background-color: var(--sky_color); 
  } 
  .list_navigation a:active, 
  .list_navigation a:visited {
@@ -67,7 +67,7 @@ background-color: var(--sky_color); /*пока не знаю как цвет с�
 
   /*Welcom, name Sedona*/
   .site_header {
-    background-image: url(../img/background_index.jpg);/*Почему он не прикрепляется ???*/
+    background-image: url(../img/background_index.jpg);
     background-position: center;
     background-repeat: no-repeat;
     width: 1200px;
@@ -85,7 +85,7 @@ font-size: 21px;
 line-height: 26px;
 background-color: var(--white_color);
   }
-   /*хочу подключить белую часть после фона,но не выходит*/
+  
    .sedona_statement::before {
     content: "";
     background-image: url(../img/svg-sedona/intro-mask.svg);
@@ -143,8 +143,7 @@ text-align: center;
   font-size: 21px;
   line-height: 21px;
 }
-/*здесь попытаюсь вставить иконки, не получается
-*/
+
 .feature1::before {
   content: "";
   background-image: url(../img/svg-sedona/icon-1.svg);
@@ -218,14 +217,16 @@ background-color: #604E43;
   line-height: 26px;
   text-transform: uppercase; 
 }
-/*хочу вставить иконки кадендариков в поля, и не выходит, не знааю как вообще работать с бефо и авте?*/
-.form_index_search input[type="text"]::after {
-  content:"";
-  background-image: url(../img/svg-sedona/calendar.svg);
-  width: 21px;
-  height: 23px;
-  position: absolute;
+.calendar path {
+  fill: #A9A9A9;
 }
+.calendar path:hover {
+  fill: var(--black);
+}
+.calendar path:active {
+  fill: var(--sky_color);
+}
+
 /*как убрать подсветку браузера по умолчанию при фокусе?*/
 .form_index_search input[type="text"]:focus{
   background-color: var(--white_color);
@@ -283,6 +284,14 @@ background-color: #604E43;
   background-color: var(--sky_color);
   width: 36px;
   height: 36px;
+  display: inline-block;
+}
+.list_footer svg {
+ 
+}
+
+.list_footer path:active {
+  opacity: 0.3; 
 }
 .list_footer li:hover {
   background-color: #669EC0;
@@ -294,11 +303,16 @@ background-color: #604E43;
   font-size: 14px;
   line-height: 26px;
 }
-.footer img: hover {
-
+.htmlacademy svg {
+width: 115px;
+height: 41px;
+vertical-align: middle;
 }
-.footer img: active {
-
+.htmlacademy path:hover {
+fill: var(--sky_color);
+}
+.htmlacademy path:active {
+fill: #BDBBBC;
 }
 /*для скрытых элементов*/
 .visually-hidden {
@@ -307,7 +321,6 @@ background-color: #604E43;
 
 /*catalog inner page*/
 /*фильтр цены, шапка сайта*/
-/*почему они фоновые картинки не подключаются?*/
 .filter {
   background-color: #766357;
   background-image: url(../img/background-catalog.jpg);
@@ -394,10 +407,13 @@ border-radius: 2px;
 .catalog_search_line ul {
   list-style: none;
 }
-/*не сделала по цене правильно*/
-.list_sort a{
+/*не сделала по цене правильно пока потом сделаю*/
+.list_sort a:not(:first-of-type) {
   color: var(--black);
   opacity: 0.3;
+}
+.list_sort a:first-child {
+  color: var(--sky_color);
 }
 .list_sort a:hover{
   color: var(--sky_color);
@@ -409,27 +425,13 @@ border-radius: 2px;
   border-bottom: none;
   opacity: 1;
 }
-
-/*это для стрелок прокрутки вверх и вниз, картинки как и во всем документе не вставляются*/
-.down_arrow::after {
-  content: "";
-  background-image: url(../img/svg-sedona/icon-down-dir.svg);
-  width: 11px;
-  height: 10px;
+/*стрелки вверх вниз*/
+.down_arrow path {
+  fill: #81B3D2;
 }
-.up_arrow::after {
-  content: "";
-  background-image: url(../img/svg-sedona/icon-up-dir.svg);
-  width: 11px;
-  height: 10px;
+.up_arrow path {
+  fill: #CACACA;
 }
-/*здесь не знаю, правильно ли написала наведение и активность*/
-.down_arrow::after:active, .up_arrow::after:active {
-color: var(--sky_color)
-}
-.down_arrow::after:hover, .up_arrow::after:hover {
-  color: var(--black)
-  }
 
 
 /*каталог отелей*/
@@ -469,6 +471,15 @@ color: var(--sky_color)
   text-align: center;
   width: 110px;
   height: 27px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.catalog_hotel a:nth-of-type(1):hover {
+  background-color: #669EC0;
+}
+.catalog_hotel a:nth-of-type(1):active {
+  background-color: #5496BD;
+  opacity: 0.3;
 }
 .catalog_hotel a:nth-of-type(2) {
   background-color: var(--brown_color);
@@ -479,8 +490,18 @@ color: var(--sky_color)
   text-align: center;
   width: 142px;
   height: 27px;
+  display: inline-block;
+  vertical-align: middle;
 }
-/*слово рейтинг и звезды добавлю*/
+.catalog_hotel a:nth-of-type(2):hover {
+  background-color: #604E43;
+}
+.catalog_hotel a:nth-of-type(2):active {
+  background-color: #503E33;
+  opacity: 0.3;
+}
+
+/*слово рейтинг*/
 .catalog_hotel .rating {
   background-color: var(--light_gray);
   color: var(--gray_for_rating);
@@ -489,27 +510,22 @@ color: var(--sky_color)
   width: 110px;
 height: 27px;
 }
-/*здесь пытаюсь вставить звезды не выходит*/
-.amara .star::after {
-  content:"";
-  background-image: url(../img/svg-sedona/star.svg),
-  url(../img/svg-sedona/star.svg)
-  url(../img/svg-sedona/star.svg)
-  url(../img/svg-sedona/star.svg);
-  width: 18px;         
-  height: 17px;         
+/*звезды рейтинга*/
+.stars {
+  display: inline-block;
+  background-image: url(../img/svg-sedona/star.svg);
+  background-repeat: space;         
+  height: 17px;
+  vertical-align: middle;
 }
-.desert .star::after {
-  content:"";
-  background-image: url(../img/svg-sedona/star.svg), url(../img/svg-sedona/star.svg),  url(../img/svg-sedona/star.svg);
-  width: 18px;         
-  height: 17px;         
+.star4 {
+  width: 80px;
 }
-.villas .star::after {
-  content:"";
-  background-image: url(../img/svg-sedona/star.svg),  url(../img/svg-sedona/star.svg);
-  width: 18px;         
-  height: 17px;         
+.star3 {
+  width: 60px;
+}
+.star2 {
+  width: 40px;
 }
 
 
