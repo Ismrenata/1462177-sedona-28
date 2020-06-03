@@ -7,9 +7,9 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page-body inner-page">
+  <body class="page-body">
     <header>
-      <nav class="main_navigation">
+      <nav class="main_navigation container">
         <div class="wrapper_navigation">
            <ul class="list_navigation">
            <li> <a href="blank.html">Информация</a></li>
@@ -66,15 +66,15 @@
   <div class="price_control">
     <p>Стоимость в сутки (р):</p>
     <div class="min-max_price">
-      <label>от
-         <input type="text" name="min-price" value="0">
-      </label>
+      <label >от
+         <input type="text" name="min-price"  value="0"></label>
+      <div class="separation_min_max"></div>
+
       <label>до
-         <input type="text" name="max-price" value="3000">
-      </label>
+         <input type="text" name="max-price"  value="3000"></label>
     </div>
     <div class="range_price_control"><!--Попытка сверстать контролер диапазона цены-->
-         <div class="scale"></div>
+         <div class="scale_control"></div>
          <button type="button" class="min-price"></button>
          <button type="button" class="max-price"></button>
     </div>
@@ -83,6 +83,7 @@
   </section>
 
   <section class="catalog_search_line">
+    <div class="search_line">
     <h2>Найдено:3</h2>
     <span>Сортировка:</span>
     <ul class="list_sort">
@@ -96,6 +97,7 @@
         <a href="">по рейтингу</a>
       </li>
     </ul>
+  </div>
     <div class="up_down">
     <a href="" class="up_arrow">
       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
@@ -109,12 +111,12 @@
 
 <article class="catalog_hotel amara">
   <div class="hotel_info">
-  <h2>AMARA RESORT&SPA</h2><br>
-  <div>
+  <h2>AMARA RESORT&SPA</h2>
+  <div class="hotel_type_price">
   <span>ГОСТИНИЦА</span>
   <span>ОТ 4000 Р.</span>
 </div>
-<div>
+<div class="hotel_buttons">
   <a href="amara_resort.html">ПОДРОБНЕЕ</a>
   <a href="submit_form.html">Забронировать</a>
 </div>
@@ -127,12 +129,12 @@
 
 <article class="catalog_hotel desert">
   <div class="hotel_info">
-  <h2>DESERT QUAIL INN</h2><br>
-  <div>
+  <h2>DESERT QUAIL INN</h2>
+  <div class="hotel_type_price">
   <span>МОТЕЛЬ</span>
   <span>ОТ 3000 Р.</span>
   </div>
-  <div>
+  <div class="hotel_buttons">
   <a href="desert.html">ПОДРОБНЕЕ</a>
   <a href="submit_form.html">Забронировать</a>
 </div>
@@ -146,12 +148,12 @@
 
 <article class="catalog_hotel villas">
   <div class="hotel_info">
-  <h2>VILLAS AT POCO DIABLO</h2><br>
-  <div>
+  <h2>VILLAS AT POCO DIABLO</h2>
+  <div class="hotel_type_price">
   <span>АПАРТАМЕНТЫ</span>
   <span>ОТ 2000 Р.</span>
 </div>
-<div>
+<div class="hotel_buttons">
   <a href="villas.html" >ПОДРОБНЕЕ</a>
   <a href="submit_form.html" >Забронировать</a>
 </div>
@@ -164,15 +166,16 @@
 </article>
 </main>
 
-<footer class="footer container"><section>
+<footer class="footer container">
+  <section class=""inner_footer>
   <div class="contacts">
    <p>#VISIT SEDONA</p>
     <a href="tel:+74956660266">ТЕЛ:+7(495)666-02-66</a>
   </div>
     <ul class="list_footer">
-<li><a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg></a></li>
-<li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg></a></li>
-<li><a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg></a></li>
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg></a></li>
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg></a></li>
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg></a></li>
     </ul>
     <div class="copyright">
     <p class="htmlacademy">WEBSITE BY
