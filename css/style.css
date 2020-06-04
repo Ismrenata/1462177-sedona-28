@@ -57,8 +57,6 @@ body {
   .main_navigation {
     font-weight: bold;
     line-height: 26px;
-    outline: 5px solid rgba(0, 255, 0, 0.3);
-    outline-offset: -5px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -66,15 +64,11 @@ body {
   }
   .wrapper_navigation {
     background-color: var(--white_color);
-    outline: 3px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -3px;
     width: 100%;
     display: flex;
   }
   .list_navigation {
     list-style: none;
-    outline: 2px solid rgba(0, 255, 255, 0.3);
-    outline-offset: -2px;
     width: 1200px;
     padding:0px;
     display: flex;
@@ -107,8 +101,6 @@ body {
  }
 /* не хочет ставиться в середину */
   .logo_sedona {
-    outline: 3px solid rgba(255, 200, 55, 0.3);
-    outline-offset: -3px;
     width: 138px;
     height: 70px;
     position: absolute;
@@ -130,8 +122,6 @@ background-color: var(--sky_color);
     background-repeat: no-repeat;
     height: 509px;
     width: 1200px;
-    outline: 3px solid rgba(255, 200, 55, 0.3);
-    outline-offset: -3px;
     display: flex;
     justify-content: center;
   }
@@ -168,8 +158,6 @@ background-color: var(--sky_color);
   margin-bottom: 16.5px;
   padding-top: 0;
   padding-bottom: 33px;
-  outline: 2px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -2px;
   align-self: center;
   }
 
@@ -180,8 +168,6 @@ background-color: var(--sky_color);
     font-weight: normal;
     margin-bottom: 51px;
     align-self: center;
-    outline: 2px solid rgba(255, 255, 0, 0.3);
-    outline-offset: -2px;
   }
 
 .reason1 {
@@ -191,13 +177,9 @@ background-color: var(--sky_color);
   list-style: none;
   display: flex;
   justify-content: flex-start;
-  outline: 5px solid rgba(255, 255, 0, 0.3);
-  outline-offset: -5px;
 }
  .reason {
   text-align: center;
-  outline: 2px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -2px;
   width: 400px;
   margin: 0;
   padding: 0;
@@ -238,8 +220,6 @@ margin-bottom: 23px;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   list-style: none;
-  outline: 10px solid rgba(60, 60, 60, 0.3);
-  outline-offset: -10px;
   margin:0;
   padding:0;
   background-color: var(--white_color);
@@ -248,8 +228,6 @@ margin-bottom: 23px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  outline: 2px solid rgba(200, 55, 55, 0.3);
-  outline-offset: -2px;
   align-items: center;
   position:relative;
 }
@@ -295,8 +273,6 @@ margin-bottom: 82px;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   list-style: none;
-  outline: 10px solid rgba(60, 60, 60, 0.3);
-  outline-offset: -10px;
   margin:0;
   padding:0;
 }
@@ -309,8 +285,6 @@ margin-bottom: 82px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 2px solid rgba(200, 55, 55, 0.3);
-  outline-offset: -2px;
   position: relative;
 }
 .index_search>h2 {
@@ -333,9 +307,6 @@ margin-bottom: 82px;
   text-transform: uppercase;
   width: 568px;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-  outline: 3px solid rgba(0, 55, 255, 0.3);
-  outline-offset: -3px;
-
 }
 div.form_index_search {
   margin-top: 86px;
@@ -351,8 +322,6 @@ div.form_index_search {
 
 .form_index_search  fieldset {
   border:none;
-  outline: 3px dashed rgba(0, 55, 255, 0.3);
-  outline-offset: -3px;
   width: 568px;
   margin: 0;
  padding: 0;
@@ -362,8 +331,6 @@ div.form_index_search {
 .container_fieldset {
   width: 458px;
   margin: 55px 55px;
-  outline: 3px dashed rgba(0, 255, 255, 0.3);
-  outline-offset: -3px;
 }
 .form_index_search legend {
 font-weight: bold;
@@ -465,8 +432,6 @@ background-color: #604E43;
   width: 1200px;
   margin: 0;
   padding: 0;
-  outline: 3px dashed rgba(0, 255, 255, 0.3);
-  outline-offset: -3px;
 }
 .map, .map a {
   margin: 0;
@@ -498,8 +463,6 @@ background-color: #604E43;
 }
 .footer .contacts {
   margin-top: 23px;
-  outline: 3px dashed rgba(0, 255, 255, 0.3);
-  outline-offset: -3px;
   margin-bottom: 36px;
 }
 .contacts p {
@@ -513,8 +476,6 @@ background-color: #604E43;
   margin-top: 36px;
   vertical-align: top;
   display: flex;
-  outline: 3px dashed rgba(0, 255, 255, 0.3);
-  outline-offset: -3px;
   padding: 0;
   margin-bottom: auto;
 }
@@ -542,8 +503,6 @@ background-color: #604E43;
 .footer .copyright {
   margin-top: 38px;
   margin-bottom: 41px;
-  outline: 3px dashed rgba(0, 255, 255, 0.3);
-  outline-offset: -3px;
 }
 .footer .htmlacademy {
   font-size: 14px;
@@ -578,8 +537,6 @@ fill: #BDBBBC;
   line-height: 21px;
   width: 1200px;
   min-height: 217px;
-  outline: 3px dashed rgba(255, 255, 255, 0.3);
-  outline-offset: -3px;
   display: flex;
   justify-content: space-between;
 }
@@ -597,8 +554,6 @@ fill: #BDBBBC;
 }
 .filter fieldset {
 border: none;
-outline: 3px dashed rgba(0, 255, 255, 0.8);
-outline-offset: -3px;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -614,16 +569,12 @@ padding: 0;
 font-weight: bold;
 font-size: 16px;
 line-height: 21px;
-outline: 2px dashed rgba(255, 255, 0, 0.8);
-outline-offset: -2px;
 margin-bottom: 24px;
 padding: 0;
 }
 
 .list_filter_infrastructure, .list_filter_housetype {
   list-style: none;
-  outline: 2px dashed rgba(255, 255, 0, 0.8);
-  outline-offset: -2px;
   margin-top: 0;
   margin-left: 0;
   padding: 0;
@@ -635,8 +586,6 @@ padding: 0;
   margin-bottom: 25px;
 }
 .filter_price_control {
-  outline: 2px dashed rgba(255, 255, 0, 0.8);
-  outline-offset: -2px;
   padding: 0;
   padding-left: 10px;
   display: flex;
@@ -669,14 +618,14 @@ padding: 0;
   left: 159px;
 }
 .min-price {
-  width: 58px;
+  width: 80px;
 }
 .max-price {
-  width: 83px;
+  width: 86px;
 }
 .min-max_price input[type="number"] {
   background-color: transparent;
-  width: 33px;
+  width: 50px;
   font-size: 14px;
   line-height: 21px;
   color: var(--white_color);
@@ -686,7 +635,7 @@ padding: 0;
   margin-left: 3px;
 }
 .max-price input[type="number"] {
- width: 38px;
+ width: 57px;
 }
 
 /*я не знаю как офорлять ползунки на контролере цены*/
@@ -752,8 +701,6 @@ margin-left: 95px;
   line-height: 18px;
   display: flex;
   justify-content: space-between;
-  outline: 2px dashed rgba(255, 255, 0, 0.8);
-  outline-offset: -2px;
   align-items: center;
 }
 .search_line {
@@ -821,8 +768,6 @@ div.up_down {
   font-size: 14px;
   line-height: 21px;
   color: var(--brown-black_text);
-  outline: 2px dashed rgba(255, 255, 0, 0.8);
-  outline-offset: -2px;
   margin: 0;
   padding: 0;
   display: grid;
