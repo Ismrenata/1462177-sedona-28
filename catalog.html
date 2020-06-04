@@ -28,7 +28,8 @@
   <section class="filter">
     <h2 class="visually-hidden">Фильтр гостиниц</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
+      <div class="first_part_filter">
+      <fieldset class="filter_infrastructure">
         <legend>Инфракстуктура</legend>
         <ul class="list_filter_infrastructure">
           <li>
@@ -45,9 +46,9 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset>
+      <fieldset class="filter_housetype">
         <legend>Тип жилья</legend>
-        <ul class="list_filter_housetipe">
+        <ul class="list_filter_housetype">
           <li>
             <input type="checkbox" name="hotel" id="hotel" checked>
             <label for="hotel">гостиница</label>
@@ -62,26 +63,29 @@
           </li>
         </ul>
       </fieldset>
+    </div>
+      <fieldset class="filter_price_control">
+          <legend>Стоимость в сутки (р):</legend>
+            <div class="min-max_price">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <div class="separation_min_max"></div>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="3000">
+              </label>
+            </div>
+            <div class="range_price_control">
+              <div class="scale">
+                <div class="bar" style="width: 80%;"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
+            </div>
+          <button type="submit">Показать</button>
+      </fieldset>
     </form>
-  <div class="price_control">
-    <p>Стоимость в сутки (р):</p>
-    <div class="min-max_price">
-      <label >от
-         <input type="text" name="min-price"  value="0"></label>
-      <div class="separation_min_max"></div>
-
-      <label>до
-         <input type="text" name="max-price"  value="3000"></label>
-    </div>
-    <div class="range_price_control"><!--Попытка сверстать контролер диапазона цены-->
-         <div class="scale_control"></div>
-         <button type="button" class="min-price"></button>
-         <button type="button" class="max-price"></button>
-    </div>
-     <button type="submit">Показать</button>
-  </div>
   </section>
-
   <section class="catalog_search_line">
     <div class="search_line">
     <h2>Найдено:3</h2>

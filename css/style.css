@@ -515,6 +515,8 @@ background-color: #604E43;
   display: flex;
   outline: 3px dashed rgba(0, 255, 255, 0.3);
   outline-offset: -3px;
+  padding: 0;
+  margin-bottom: auto;
 }
 .footer a {color: var(--black);}
 .list_footer li {
@@ -522,15 +524,12 @@ background-color: #604E43;
   width: 46px;
   height: 48px;
   margin-right: 6px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
 }
 
-.list_footer a {
-left: 15px;
-position: absolute;
-top: 11px;
-}
 .list_footer path:active {
   opacity: 0.3;
 }
@@ -586,9 +585,15 @@ fill: #BDBBBC;
 }
 .filter form {
   display: flex;
-  width: 527px;
   justify-content: space-between;
   margin-left: 73px;
+  margin-right: 73px;
+  margin-top: 26.5px;
+  width: 1200px;
+}
+.first_part_filter {
+  display: flex;
+
 }
 .filter fieldset {
 border: none;
@@ -596,9 +601,14 @@ outline: 3px dashed rgba(0, 255, 255, 0.8);
 outline-offset: -3px;
 display: flex;
 flex-direction: column;
-width: 254px;
+justify-content: flex-start;
 padding: 0;
-margin-top: 26px;
+}
+.filter_infrastructure {
+  margin-right: 119px;
+}
+.filter_price_control {
+
 }
 .filter legend {
 font-weight: bold;
@@ -607,31 +617,33 @@ line-height: 21px;
 outline: 2px dashed rgba(255, 255, 0, 0.8);
 outline-offset: -2px;
 margin-bottom: 24px;
-
-}
-.list_filter_infrastructure, .list_filter_housetipe {
-  list-style: none;
-  outline: 2px dashed rgba(255, 255, 0, 0.8);
-outline-offset: -2px;
-margin-left: 0;
 padding: 0;
 }
-.list_filter_infrastructure li, .list_filter_housetipe li {
- margin-left: 0;
- margin-bottom: 25px;
-}
-.price_control {
+
+.list_filter_infrastructure, .list_filter_housetype {
+  list-style: none;
   outline: 2px dashed rgba(255, 255, 0, 0.8);
   outline-offset: -2px;
-  width: 400px;
-  margin-top: 26px;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+}
+.list_filter_infrastructure li, .list_filter_housetype li {
+ margin-left: 0;
+}
+.list_filter_infrastructure li:not(:last-child), .list_filter_housetype li:not(:last-child){
+  margin-bottom: 25px;
+}
+.filter_price_control {
+  outline: 2px dashed rgba(255, 255, 0, 0.8);
+  outline-offset: -2px;
   padding: 0;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-.price_control p {
+.filter_price_control legend {
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -639,7 +651,7 @@ padding: 0;
 }
 .min-max_price {
   border:2px solid var(--white_color);
-  width: 317px;
+
   padding-left: 52px;
   padding-right: 36px;
   padding-top: 7px;
@@ -656,50 +668,62 @@ padding: 0;
   position: absolute;
   left: 159px;
 }
-.price_control label {
-padding:0;
-margin-right: 5px;
-margin:0;
+.min-price {
+  width: 58px;
 }
-.price_control input[type="text"] {
+.max-price {
+  width: 83px;
+}
+.min-max_price input[type="number"] {
   background-color: transparent;
+  width: 33px;
   font-size: 14px;
   line-height: 21px;
   color: var(--white_color);
   border: none;
   padding:0;
+  margin: 0;
   margin-left: 3px;
+}
+.max-price input[type="number"] {
+ width: 38px;
 }
 
 /*я не знаю как офорлять ползунки на контролере цены*/
 .range_price_control {
-  margin-top: 11px;
-  margin-bottom: 23px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   width: 316px;
   position: relative;
 }
-.scale_control {
+ .scale {
 width: 316px;
 height: 2px;
 background-color: white;
-position: absolute;
+opacity: 0.3;
 top: 8px;
 }
-.range_price_control button[type="button"] {
-  border-radius: 50%;
-  width: 19px;
-  height: 21px;
-  position: absolute;
-  z-index: 2;
-}
-button.min-price {
-left: 10px;
-}
-button.max-price {
-right: 10px;
+.scale .bar  {
+  width: 70%;
+  height: 2px;
+background-color: white;
 }
 
-.price_control button[type="submit"] {
+.range_price_control .toggle {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.filter_price_control button[type="submit"] {
   background-color: transparent;
   color: var(--white_color);
   text-align: center;
@@ -711,10 +735,9 @@ text-transform: uppercase;
 width: 137px;
 height: 36px;
 margin-left: 95px;
-margin-bottom: 32px ;
 
 }
-.filter button[type="submit"]:hover {
+.filter_price_control button[type="submit"]:hover {
   background-color: var(--white_color);
   color: var(--black);
 }
