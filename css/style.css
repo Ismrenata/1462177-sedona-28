@@ -58,52 +58,66 @@ body {
     font-weight: bold;
     line-height: 26px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+
     position: relative;
+
   }
   .wrapper_navigation {
     background-color: var(--white_color);
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
   }
   .list_navigation {
     list-style: none;
     width: 1200px;
-    padding:0px;
+    padding: 0px;
     display: flex;
+    flex-wrap: wrap;
     margin: 15px 72px;
   }
   /* расположение ссылок в навигации шапки*/
-  .list_navigation li:nth-child(1) {
+  .list_navigation li:nth-child(2n+1) {
     margin-right: 134px;
     justify-content: start;
   }
-  .list_navigation li:nth-child(2) {
+  .list_navigation li:nth-child(2), .list_navigation li:nth-child(6), .list_navigation li:nth-child(10)  {
    margin-right: 418px;
   }
-  .list_navigation li:nth-child(3) {
+  .list_navigation li:nth-child(4n+3) {
     margin-right: 147px;
   }
-   .list_navigation li:nth-child(4) {
+   .list_navigation li:nth-child(4n) {
     justify-content: end;
+    color: var(--black);
 
   }
   .list_navigation a {
     color: var(--black);
   }
-  .list_navigation a:active,
- .list_navigation a:visited {
+  .list_navigation a:active {
    color: var(--brown_color);
  }
+ .list_navigation .visited_page {
+  color: var(--brown_color);
+}
  .list_navigation a:hover {
    color: var(--sky_color);
  }
-/* не хочет ставиться в середину */
+
   .logo_sedona {
     width: 138px;
     height: 70px;
     position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
   }
 
  .main-navigation img {
@@ -122,10 +136,15 @@ background-color: var(--sky_color);
     background-repeat: no-repeat;
     height: 509px;
     width: 1200px;
-    display: flex;
-    justify-content: center;
-  }
+    position: relative;
 
+  }
+  .site_header img {
+    top: 77.35px;
+    left: 371.38px;
+    position: absolute;
+
+  }
 .site_header::after {
     content: "";
     background-image: url(../img/svg-sedona/intro-mask.svg);
@@ -134,7 +153,7 @@ background-color: var(--sky_color);
     position: absolute;
     width: 1200px;
     height: 57px;
-    top: 510px;
+    bottom: -2px;
 }
   /* раздел о причинах посетить седону*/
   .best_reasons {
@@ -152,12 +171,16 @@ background-color: var(--sky_color);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+
   background-color: var(--white_color);
+
   width: 470px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top:43px;
   margin-bottom: 16.5px;
   padding-top: 0;
-  padding-bottom: 33px;
+  padding-bottom: 25px;
   align-self: center;
   }
 
@@ -166,8 +189,11 @@ background-color: var(--sky_color);
     line-height: 26px;
     text-align: center;
     font-weight: normal;
+    margin-top: 0;
     margin-bottom: 51px;
     align-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .reason1 {
@@ -193,13 +219,28 @@ line-height: 21px;
 margin-top: 47px;
 margin-bottom: 25px;
 }
-.reason p:nth-of-type(1) {
-margin-bottom: 23px;
+.reason2 h3 {
+  margin-top: 50px;
 }
+
+.reason p:nth-of-type(1) {
+  margin-top: 0;
+  margin-bottom: 22px;
+  padding: 2px;
+}
+.reason2 p:nth-of-type(1), .reason3 p:nth-of-type(1), .reason4 p:nth-of-type(1), .reason5 p:nth-of-type(1) {
+  margin-bottom: 21px;
+}
+
+
 .reason p:nth-of-type(2) {
   margin-bottom: 54px;
+  margin-top: 0;
+  padding: 0;
   }
-
+  .reason2 p:nth-of-type(2) {
+    margin-bottom: 51px;
+  }
 .reason2 {
   width: 1200px;
   display: flex;
@@ -267,7 +308,7 @@ margin-bottom: 82px;
   width: 64px;
   height: 77px;
   position: absolute;
-  top: 61px;
+  top: 56px;
 }
 .list_reasons3_5 {
   display: grid;
@@ -281,7 +322,7 @@ margin-bottom: 82px;
   background-color: var(--white_color);
   text-align: center;
   padding: 0;
-  margin:0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,33 +332,38 @@ margin-bottom: 82px;
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
-  margin-top: 58px;
-  margin-bottom: 20px;
+  margin-top: 56px;
+  margin-bottom: 26px;
   padding:0;
+  width: 100%
 }
 .index_search>p {
-  margin-bottom: 29px;
-  padding:0;
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding: 5px;
+  line-height: 24px;
+  width: 100%
 }
 .form_index_search {
   background-color: var(--white_color);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   width: 568px;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-}
-div.form_index_search {
   margin-top: 86px;
   padding: 0;
+
 }
+
 .form_index_search form{
-  width: 568px;
+  padding: 0;
+  top: 204px;
   position: absolute;
   z-index: 150;
   background-color: var(--white_color);
-  top: 186px;
+
 }
 
 .form_index_search  fieldset {
@@ -331,6 +377,7 @@ div.form_index_search {
 .container_fieldset {
   width: 458px;
   margin: 55px 55px;
+  padding: 0;
 }
 .form_index_search legend {
 font-weight: bold;
@@ -351,32 +398,51 @@ align-items: center;
 .form_index_search legend:hover {
 background-color: #604E43;
 }
-
-.form_index_search input[type="text"] {
-  color: var(--black);
-  background-color: var(--light_gray);
-  width: 346px;
-  height: 38px;
+.arrival_date {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+ justify-content: space-between;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  text-transform: uppercase;
+  padding: 0;
 }
-
-
-.form_index_search p:nth-of-type(1) {
-  margin-bottom: 29px;
-}
-.form_index_search p:nth-of-type(2) {
+.date_of_departure {
   margin-bottom: 30px;
-}
-.form_index_search_amount_visiters {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding:0;
-  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  width: 100%;
+  padding: 0;
 }
+.form_index_search input[type="text"] {
+  color: var(--black);
+  background-color: var(--light_gray);
+  display: block;
+  width: 346px;
+  height: 38px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  padding-left: 10px;
+}
+.arrival_date label, .date_of_departure label  {
 
+  white-space: pre;
+  align-self: center;
+}
+.calendar {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  border: none;
+  background-color: transparent;
+}
 .calendar path {
   fill: #A9A9A9;
 }
@@ -402,8 +468,56 @@ background-color: #604E43;
   text-transform: uppercase;
   text-align: center;
   color: var(--black);
-
+  padding: 0;
+  border: none;
 }
+.form_index_search_amount_visiters {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 54px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form_index_search_amount_visiters p {
+position: relative;
+margin-top: 0;
+margin-bottom: 0;
+padding: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.form_index_search_amount_visiters p:first-of-type {
+  margin-right: 53px;
+  width: 226px;
+}
+
+.form_index_search_amount_visiters p:nth-of-type(2) {
+  width: 179px;
+}
+.index_search_decrease{
+  width: 12px;
+  height: 3px;
+  position: absolute;
+  top: 18px;
+  right: 89px;
+  background-color: #A9A9A9;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.index_search_increase {
+  position: absolute;
+  top: 14px;
+  right: 13px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
 .form_index_search button[type="submit"] {
   background-color: var(--sky_color);
   font-weight: bold;
@@ -416,6 +530,7 @@ background-color: #604E43;
   vertical-align: middle;
   text-transform: uppercase;
   margin-top: 0;
+  border: none;
 }
 .form_index_search button[type="submit"]:hover {
   background-color: #669EC0;
@@ -450,20 +565,21 @@ background-color: #604E43;
   display: flex;
   justify-content: space-between;
 
-  padding-right: 117px;
-  padding-left: 101px;
+  padding-right: 101px;
+  padding-left: 117px;
 }
 .footer .inner_footer {
   background-color: rgba(255, 255, 255, 1);
 }
 .index_footer {
   z-index: 2;
-  margin-top: -120px;
+  margin-top: -126px;
 
 }
 .footer .contacts {
   margin-top: 23px;
   margin-bottom: 36px;
+  padding-left: 13px;
 }
 .contacts p {
   margin: 0;
@@ -477,6 +593,7 @@ background-color: #604E43;
   vertical-align: top;
   display: flex;
   padding: 0;
+  padding-right: 55px;
   margin-bottom: auto;
 }
 .footer a {color: var(--black);}
@@ -503,17 +620,22 @@ background-color: #604E43;
 .footer .copyright {
   margin-top: 38px;
   margin-bottom: 41px;
+  display: flex;
+  align-self: center;
+  vertical-align: middle;
 }
 .footer .htmlacademy {
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
  margin: 0;
+
 }
 .htmlacademy svg {
 width: 115px;
 height: 41px;
 vertical-align: middle;
+padding-left: 5px;
 }
 .htmlacademy path:hover {
 fill: var(--sky_color);
@@ -543,10 +665,11 @@ fill: #BDBBBC;
 .filter form {
   display: flex;
   justify-content: space-between;
-  margin-left: 73px;
-  margin-right: 73px;
-  margin-top: 26.5px;
+  margin-left: 72px;
+  margin-right: 72px;
+  margin-top: 26px;
   width: 1200px;
+  padding: 0;
 }
 .first_part_filter {
   display: flex;
@@ -579,6 +702,34 @@ padding: 0;
   margin-left: 0;
   padding: 0;
 }
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 42px;
+}
+
+.filter-input-checkbox:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/svg-sedona/checkbox-off.svg);
+}
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -42px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/svg-sedona/checkbox-on.svg);
+}
+
 .list_filter_infrastructure li, .list_filter_housetype li {
  margin-left: 0;
 }
@@ -640,27 +791,29 @@ padding: 0;
 
 /*я не знаю как офорлять ползунки на контролере цены*/
 .range_price_control {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 33px;
   width: 316px;
   position: relative;
 }
  .scale {
 width: 316px;
 height: 2px;
-background-color: white;
-opacity: 0.3;
+background-color: rgba(255, 255, 255, 0.3);
 top: 8px;
+z-index: 1;
 }
-.scale .bar  {
+.bar  {
   width: 70%;
   height: 2px;
 background-color: white;
+position: absolute;
+z-index: 2;
 }
 
 .range_price_control .toggle {
   position: absolute;
-  top: 12px;
+  top: 7px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -683,7 +836,7 @@ line-height: 21px;
 text-transform: uppercase;
 width: 137px;
 height: 36px;
-margin-left: 95px;
+margin-left: 82px;
 
 }
 .filter_price_control button[type="submit"]:hover {
@@ -750,9 +903,13 @@ margin-left: 95px;
 div.up_down {
   margin-right: 73px;
   justify-self: flex-end;
+
 }
 .down_arrow path {
   fill: #81B3D2;
+}
+.up_arrow {
+  margin-right: 12px;
 }
 .up_arrow path {
   fill: #CACACA;
