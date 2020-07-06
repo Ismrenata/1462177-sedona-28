@@ -494,7 +494,7 @@ width: 458px;
 margin: 55px 55px;
 padding: 0;
 }
-.form_index_search legend {
+.open_form {
 font-weight: bold;
 font-size: 21px;
 line-height: 26px;
@@ -512,11 +512,10 @@ display: flex;
   -ms-flex-align: center;
       align-items: center;
 }
-
-.form_index_search legend:active {
+.open_form:active {
 background-color: #503E33;
 }
-.form_index_search legend:hover {
+.open_form:hover {
 background-color: #604E43;
 }
 .arrival_date {
@@ -1413,6 +1412,7 @@ padding-left: 1px;
   margin: 0;
   padding: 0;
   background-image: url("img/map_sedona.png");
+  border: 0px;
   }
 .modal_close {
   background-color: var(--sky_color);

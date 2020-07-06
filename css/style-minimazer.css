@@ -59,9 +59,9 @@ p.sedona_statement{text-align:center;font-weight:700;font-size:21px;line-height:
 .form_index_search form{padding:0;top:204px;position:absolute;z-index:150;background-color:var(--white_color)}
 .form_index_search fieldset{border:none;width:568px;margin:0;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .container_fieldset{width:458px;margin:55px;padding:0}
-.form_index_search legend{font-weight:700;font-size:21px;line-height:26px;color:var(--white_color);background-color:var(--brown_color);width:568px;height:86px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.form_index_search legend:active{background-color:#503E33}
-.form_index_search legend:hover{background-color:#604E43}
+.open_form{font-weight:700;font-size:21px;line-height:26px;color:var(--white_color);background-color:var(--brown_color);width:568px;height:86px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.open_form:active{background-color:#503E33}
+.open_form:hover{background-color:#604E43}
 .arrival_date{margin-bottom:30px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:700;font-size:14px;line-height:26px;padding:0}
 .date_of_departure{margin-bottom:30px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:700;font-size:14px;line-height:26px;width:100%;padding:0}
 .form_index_search input[type="text"]{color:var(--black);background-color:var(--light_gray);display:block;width:334px;height:38px;font-weight:700;text-transform:uppercase;border:none;padding:0;padding-left:12px}
@@ -180,7 +180,7 @@ div.up_down{margin-right:73px;justify-self:flex-end;padding-top:4px}
 .star2{width:40px;padding-left:1px}
 .modal_show{display:block;-webkit-animation-name:bounce;animation-name:bounce;-webkit-animation-duration:.6s;animation-duration:.6s}
 .modal_map{position:absolute;z-index:20;left:40px;top:2153px}
-.modal_map iframe{width:1200px;margin:0;padding:0;background-image:url(img/map_sedona.png)}
+.modal_map iframe{width:1200px;margin:0;padding:0;background-image:url(img/map_sedona.png);border:0px}
 .modal_close{background-color:var(--sky_color);color:#fff;font-weight:700;text-transform:uppercase;height:40px;position:absolute;top:20px;right:50px}
 @-webkit-keyframes bounce {
 0%{-webkit-transform:translateY(-110px);transform:translateY(-110px)}
